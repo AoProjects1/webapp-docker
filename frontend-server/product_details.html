@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+<body>
+    
+    <header>
+        <div class="header-1">
+            <a href="index.html" class="logo"><i class="fas fa-shopping-basket"></i>AlexGrocery</a>
+
+            <form action="" class="search-box-container">
+                <input type="search" id="search-box" placeholder="search here..." />
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+        </div>
+
+        <div class="header-2">
+            <div id="menu-bar" class="fas fa-bars"></div>
+
+            <nav class="navbar">
+                <a href="index.html">home</a>
+                <a href="products.html">products</a>
+                <a href="contact.html">contact</a>
+            </nav>
+
+            <div class="icons">
+                <a href="cart.html" class="fas fa-shopping-cart" id="cartIcon"></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="boxs">
+            <div class="images">
+                <div class="img-holder active">
+                    <img src="" id="prodImg">
+                </div>
+            </div>
+            <div class="basic-info">
+                <h1 id="prodName" style="font-size: 30px;"></h1>
+                <div class="rate">
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                </div>
+                <span id="discountedPrice"></span><s><span id="prodPrice" style="text-decoration-line: line-through;color: darkgray;"></span></s>
+                <div class="options">
+                    <a  onclick="addToCart();">Add to Cart</a>
+                </div>
+            </div>
+            <div class="description" >
+                <p id="prodDesc" style="font-size: 20px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus temporibus corporis repudiandae, consectetur nostrum nisi commodi placeat rerum molestias numquam nihil accusantium deleniti! Enim, nesciunt a quis amet hic officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nemo accusantium tempora facere doloremque cum iusto, ut neque, fuga omnis libero laborum ullam. At dolorum qui atque labore illo dignissimos.</p>
+                
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="snackbar">Product added successfully</div>
+
+<!-- footer section starts  -->
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>AlexGrocery</a>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam
+                culpa sit enim nesciunt rerum laborum illum quam error ut alias!
+            </p>
+            <div class="share">
+                <a href="#" class="btn fab fa-facebook-f"></a>
+                <a href="#" class="btn fab fa-twitter"></a>
+                <a href="#" class="btn fab fa-instagram"></a>
+                <a href="#" class="btn fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>our location</h3>
+            <div class="links">
+                <a href="#">Egypt</a>
+                <a href="#">USA</a>
+                <a href="#">france</a>
+                <a href="#">japan</a>
+                <a href="#">russia</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <div class="links">
+                <a href="#">home</a>
+                <a href="#">category</a>
+                <a href="#">product</a>
+                <a href="#">deal</a>
+                <a href="#">contact</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>download app</h3>
+            <div class="links">
+                <a href="#">google play</a>
+                <a href="#">window xp</a>
+                <a href="#">app store</a>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="credit">All rights reserved!</h1>
+</section>
+
+<!-- footer section ends -->
+
+<script src="scripts/product_details.js"></script>
+</body>
+</html>

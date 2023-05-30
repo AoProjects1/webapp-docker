@@ -1,0 +1,134 @@
+:root{
+	--green: #FF6347;
+	--black:#2c2c54;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+  }
+  body{
+    background: #eee;
+    overflow: hidden;
+  }
+  ::selection{
+    background: rgba(188, 56, 26, 0.3);
+  }
+  .container{
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 100px auto;
+  }
+  .wrapper{
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+  }
+  .wrapper .title{
+    height: 90px;
+    background: var(--green);
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper .myform{
+    padding: 30px 25px 25px 25px;
+  }
+  .wrapper .myform .row-form{
+    height: 45px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  .wrapper .myform .row-form input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 60px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  .myform .row-form input:focus{
+    border-color: var(--green);
+    box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+  }
+  .myform .row-form input::placeholder{
+    color: #999;
+  }
+  .wrapper .myform .row-form i{
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    color: #fff;
+    font-size: 18px;
+    background: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper .myform .pass{
+    margin: -8px 0 20px 0;
+  }
+  .wrapper .myform .pass a{
+    color: #16a085;
+    font-size: 17px;
+    text-decoration: none;
+  }
+  .wrapper .myform .pass a:hover{
+    text-decoration: underline;
+  }
+  .wrapper .myform .button input{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 0px;
+    background: var(--green);
+    border: 1px solid var(--green);
+    cursor: pointer;
+  }
+  .myform .button input:hover{
+    background: #12876f;
+  }
+  .wrapper .myform .signup-link{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 17px;
+  }
+  .wrapper .myform .signup-link a{
+    color: #16a085;
+    text-decoration: none;
+  }
+  form .signup-link a:hover{
+    text-decoration: underline;
+  }
+  .wrapper .myform .alert-form .alert{
+    background-color: #f2a9af;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .wrapper .myform .alert-form {
+    margin-bottom: 20px;
+  }
+
+  input[type=radio] {
+    accent-color: var(--green);
+}
+.hide-alert{
+  visibility: hidden; 
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0; 
+
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Responsive Shopping Cart design</title>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		type="text/css" />
+	<link href="styles/cart.css" rel="stylesheet" />
+	<link rel="stylesheet" href="styles/style.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<!-- header section starts  -->
+
+<header>
+	<div class="header-1">
+		<a href="index.html" class="logo"><i class="fas fa-shopping-basket"></i>AlexGrocery</a>
+
+		<form action="" class="search-box-container">
+			<input type="search" id="search-box" placeholder="search here..." />
+			<label for="search-box" class="fas fa-search"></label>
+		</form>
+	</div>
+
+	<div class="header-2">
+		<div id="menu-bar" class="fas fa-bars"></div>
+
+		<nav class="navbar">
+			<a href="index.html">home</a>
+			<a href="products.html">product</a>
+			<a href="contact.html">contact</a>
+		</nav>
+
+		<div class="icons">
+			<a href="cart.html" class="fas fa-shopping-cart" id="cartIcon"></a>
+			<a href="profile.html" class="fas fa-user-circle"></a>
+			<a class="fas fa-sign-out-alt" onclick="signout()" id="signoutIcon"></a>
+		</div>
+	</div>
+</header>
+
+<!-- header section ends -->
+
+<body>
+	<div class="wrapper">
+		<h1>Shopping Cart</h1>
+		<div class="project">
+			<div class="shop">
+				<div class="box">
+					<img src="images/product-7.png" />
+					<div class="content">
+						<h3>Organic Apple</h3>
+						<h4>Price: 89EGP</h4>
+						<p class="unit">Quantity: <input name="" value="2" /></p>
+						<button class="btn-area btn2" value="0" onclick="deleteItem('box1')">
+							<i aria-hidden="true" class="fa fa-trash"></i> Remove
+						</button>
+					</div>
+				</div>
+				<div class="box" id="box">
+					<img src="images/product-2.png" />
+					<div class="content">
+						<h3>Organic Tomato</h3>
+						<h4>Price: 75EGP</h4>
+						<p class="unit">Quantity: <input name="" value="1" /></p>
+						<button class="btn-area btn2" onclick="deleteItem('box2')">
+							<i aria-hidden="true" class="fa fa-trash"></i> Remove
+						</button>
+					</div>
+				</div>
+				<div class="box" id="box">
+					<img src="images/product-5.png" />
+					<div class="content">
+						<h3>Organic Grapes</h3>
+						<h4>Price: 55EGP</h4>
+						<p class="unit">Quantity: <input name="" value="0" /></p>
+						<button class="btn-area btn2" value="2" onclick="deleteItem('box3')">
+							<i aria-hidden="true" class="fa fa-trash"></i> Remove
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="right-bar">
+				<p><span>Subtotal</span> <span id="subtotal-money">219EGP</span></p>
+				<hr />
+				<p><span>Tax (5%)</span> <span id="tax-money">11EGP</span></p>
+				<hr />
+				<p><span>Shipping</span> <span >20EGP</span></p>
+				<hr />
+				<p><span>Total</span> <span id="total-money">250EGP</span></p>
+				<a onclick="checkout();"><i class="fa fa-shopping-cart"></i>Checkout</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- custom js file link  -->
+	<script src="sscript.js"></script>
+	<script src="scripts/cart.js"></script>
+</body>
+
+</html>

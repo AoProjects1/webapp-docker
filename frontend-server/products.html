@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+    
+    <header>
+        <div class="header-1">
+            <a href="index.html" class="logo"><i class="fas fa-shopping-basket"></i>AlexGrocery</a>
+
+            <form action="" class="search-box-container">
+                <input type="search" id="search-box" placeholder="search here..." />
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+        </div>
+
+        <div class="header-2">
+            <div id="menu-bar" class="fas fa-bars"></div>
+
+            <nav class="navbar">
+                <a href="index.html">home</a>
+                <a href="contact.html">contact</a>
+            </nav>
+
+            <div class="icons">
+                <a href="cart.html" class="fas fa-shopping-cart" id="cartIcon"></a>
+                <a href="profile.html" class="fas fa-user-circle"></a>
+                <a class="fas fa-sign-out-alt" onclick="signout()" id="signoutIcon"></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="product" id="deal">
+        <h1 class="heading"><span>Products</span></h1>
+
+        <div style="display: flex;justify-content: space-between;font-size: 22px;margin-bottom: 30px;">
+        
+            <div class="search-box-container" style="display: inline;">
+                <input type="text" id="search-box-product" onkeyup="searchProduct(this.value); " placeholder="search for a product" />
+                <label for="search-box-product" class="fas fa-search"></label>
+            </div>
+            
+            <div class="type-form" style="display: inline;">
+                <input class="type-input" type="radio" onclick="showProducts(filterProduct(this.value));" name="type" value="juice"><span>Juice</span>
+                <input class="type-input" type="radio" onclick="showProducts(filterProduct(this.value));" name="type" value="meat"> <span>Meat</span>
+                <input class="type-input" type="radio" onclick="showProducts(filterProduct(this.value));" name="type" value="veggies"> <span>Veggies</span>
+                <input class="type-input" type="radio" onclick="showProducts(filterProduct(this.value));" name="type" value="fruits"> <span>Fruits</span>
+            </div>
+        
+        </div>
+
+        <div class="box-container" id="products-container">
+            
+
+        </div>
+
+        <div id="snackbar">Product added successfully</div>
+    </section>
+
+    <script src="scripts/products.js"></script>
+</body>
+</html>

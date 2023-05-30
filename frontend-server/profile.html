@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-container h1 {
+            color: #FF6347;
+            font-weight: bold;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .profile-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-info p {
+            margin: 35px 0;
+            font-size: 26px;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 50px;
+            display: block;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-info strong {
+            color: #FF6347;
+            font-size: 32px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-1">
+            <a href="index.html" class="logo"><i class="fas fa-shopping-basket"></i>AlexGrocery</a>
+
+            <form action="" class="search-box-container">
+                <input type="search" id="search-box" placeholder="search here..." />
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+        </div>
+
+        <div class="header-2">
+            <div id="menu-bar" class="fas fa-bars"></div>
+
+            <nav class="navbar">
+                <a href="index.html">home</a>
+                <a href="products.html">product</a>
+                <a href="contact.html">contact</a>
+            </nav>
+
+            <div class="icons">
+                <a href="cart.html" class="fas fa-shopping-cart"></a>
+                <a href="login.html" class="fas fa-sign-out-alt" ></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="profile-container">
+        <h1>My Profile</h1>
+        <div class="profile-info">
+            <img src="images/profile.png" alt="Profile Picture" class="profile-image">
+            <p id="name-label"><strong>Name:</strong> </p>
+            <p id="email-label"><strong>Email:</strong> </p>
+            <p id="username-label"><strong>Username:</strong> </p>
+            <p id="gender-label"><strong>Gender:</strong> </p>
+
+        </div>
+    </div>
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>AlexGrocery</a>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam
+                    culpa sit enim nesciunt rerum laborum illum quam error ut alias!
+                </p>
+                <div class="share">
+                    <a href="#" class="btn fab fa-facebook-f"></a>
+                    <a href="#" class="btn fab fa-twitter"></a>
+                    <a href="#" class="btn fab fa-instagram"></a>
+                    <a href="#" class="btn fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>our location</h3>
+                <div class="links">
+                    <a href="#">Egypt</a>
+                    <a href="#">USA</a>
+                    <a href="#">france</a>
+                    <a href="#">japan</a>
+                    <a href="#">russia</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <div class="links">
+                    <a href="#">home</a>
+                    <a href="#">category</a>
+                    <a href="#">product</a>
+                    <a href="#">deal</a>
+                    <a href="#">contact</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>download app</h3>
+                <div class="links">
+                    <a href="#">google play</a>
+                    <a href="#">window xp</a>
+                    <a href="#">app store</a>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="credit">All rights reserved!</h1>
+    </section>
+
+    <script src="scripts/profile.js"></script>
+</body>
+
+</html>

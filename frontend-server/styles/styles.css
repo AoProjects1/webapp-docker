@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxs {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px rgb(0, 0, 0, 12%);
+    padding: 45px;
+    margin: 15px 0;
+    width: 950px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "images info"
+    "images description";
+    grid-gap: 35px;
+}
+
+.boxs .images {
+    grid-area: images;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "active active active"
+    "idle idle idle";
+    grid-gap: 5px;
+}
+
+.boxs .images .img-holder img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.boxs .images .img-holder.active {
+    grid-area: active;
+}
+
+.boxs .images .img-holder:not(.active):hover {
+    opacity: 0.95;
+    cursor: pointer;
+}
+
+.boxs .basic-info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.boxs .basic-info .rate {
+    color: yellow;
+}
+
+.boxs .basic-info span {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.boxs .basic-info .options a {
+    color: white;
+    background-color: #FF6347;
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.boxs .basic-info .options a:hover {
+    background-color: #2c2c54;
+}
+
+.boxs .description {
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.boxs .description p {
+    color: gray;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.boxs .description .features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: gray;
+}
+
+.boxs .description .features i {
+    margin-right: 5px;
+}
+
+.boxs .description .features .fa-circle-check {
+    color: #2c2c54;
+}
+
+.boxs .description .features .fa-circle-xmark {
+    color: yellow;
+}
+
+.boxs .description .social {
+    list-style: none;
+    display: flex;
+}
+
+.boxs .description .social a {
+    margin-right: 15px;
+    color: gray;
+}
+
+.boxs .description .social a:hover {
+    color: #FF6347;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #34b948;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+
+
+
+
+
+  
+
+@media (max-width: 991px) {
+    .boxs {
+        width: 750px;
+        grid-template-areas: 
+        "info info"
+        "images description";
+    }
+    .boxs .basic-info .options a {
+        padding: 8.5px 12px;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 769px) {
+    .boxs .basic-info span {
+        position: absolute;
+        align-self: flex-end;
+    }
+    .boxs .basic-info .options {
+        position: absolute;
+        align-self: flex-end;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .boxs {
+        width: 600px;
+        grid-template-areas: 
+        "images info"
+        "description description";
+    }
+    .boxs .images {
+        gap: 3px;
+    }
+    .boxs .images .img-holder img {
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 640px) {
+    .boxs {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        padding: 35px;
+        margin: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "images"
+        "info"
+        "description";
+    }
+}

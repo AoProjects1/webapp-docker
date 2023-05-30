@@ -1,0 +1,57 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container" style="margin: 50px auto;">
+      <div class="wrapper">
+        <div class="title"><span>Register Form</span></div>
+        <div class="myform">
+          <div class="alert-form hide-alert">
+            <div class="alert" id="alertColor">
+              <span id="alert-text"></span>
+            </div>
+          </div>
+          <div class="row-form">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username-inp" placeholder="Username" name="username" required>
+          </div>
+          <div class="row-form">
+            <i class="fas fa-user"></i>
+            <input type="text" id="fullname-inp" placeholder="Full Name" name="full_name" required>
+          </div>
+          <div class="row-form">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email-inp" placeholder="Email" name="email" required>
+          </div>
+          <div class="row-form">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password-inp" placeholder="Password" name="password" required>
+          </div>
+          <div class="gender-form">
+            <input class="gender-input" type="radio" name="gender" value="male" checked> Male
+            <input class="gender-input" type="radio" name="gender" value="female"> Female
+          </div>
+          <div class="row-form button">
+            <input type="button" id="register-btn" value="Register">
+          </div>
+          <div class="signup-link">Already a member? <a href="login.html">Login now</a></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/register.js"></script>
+  </body>
+  
+</html>
